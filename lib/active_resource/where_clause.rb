@@ -11,6 +11,10 @@ module ActiveResource
       @loaded = false
     end
 
+    def class
+      @resource_class.collection_parser
+    end
+
     def where(clauses = {})
       all(params: clauses)
     end
