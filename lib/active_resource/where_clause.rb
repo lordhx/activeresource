@@ -15,6 +15,10 @@ module ActiveResource
       @resource_class.collection_parser
     end
 
+    def nil?
+      false
+    end
+
     def where(clauses = {})
       all(params: clauses)
     end
