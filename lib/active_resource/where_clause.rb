@@ -19,6 +19,10 @@ module ActiveResource
       false
     end
 
+    def is_a?(klass)
+      @resource_class.collection_parser.is_a?(klass)
+    end
+
     def where(clauses = {})
       all(params: clauses)
     end
